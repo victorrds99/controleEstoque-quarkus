@@ -13,4 +13,11 @@ public class ExampleResource {
     public String hello() {
         return "Seja bem vindo cara!!";
     }
+    
+    @Path("/{nome}")
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String saldacoes(String nome) {
+        return "Seja bem vindo "+ nome;
+    }
 }
